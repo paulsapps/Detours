@@ -459,7 +459,10 @@ LONG InterlockedCompareExchange(LONG *ptr, LONG nval, LONG oval)
     return (LONG)::InterlockedCompareExchange((PVOID*)ptr, (PVOID)nval, (PVOID)oval);
 }
 #else
+#pragma warning(push)
+#pragma warning(disable:4091) // 'typedef ': ignored on left of '' when no variable is declared
 #include <dbghelp.h>
+#pragma warning(pop
 #endif
 
 #ifdef IMAGEAPI // defined by DBGHELP.H
