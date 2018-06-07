@@ -462,7 +462,7 @@ LONG InterlockedCompareExchange(LONG *ptr, LONG nval, LONG oval)
 #pragma warning(push)
 #pragma warning(disable:4091) // 'typedef ': ignored on left of '' when no variable is declared
 #include <dbghelp.h>
-#pragma warning(pop
+#pragma warning(pop)
 #endif
 
 #ifdef IMAGEAPI // defined by DBGHELP.H
